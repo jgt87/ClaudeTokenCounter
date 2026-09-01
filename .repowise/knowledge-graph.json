@@ -1,0 +1,241 @@
+{
+  "version": "1.0.0",
+  "schema_version": 1,
+  "project": {
+    "name": "ClaudeTokenCounter",
+    "is_monorepo": false,
+    "total_files": 5,
+    "entry_points": [],
+    "tech_stack": [],
+    "entry_candidates": [],
+    "graph_mode": "flow"
+  },
+  "nodes": [
+    {
+      "id": "file:README.md",
+      "type": "document",
+      "filePath": "README.md",
+      "language": "markdown",
+      "symbolCount": 0,
+      "lineCount": 134,
+      "complexity": "moderate",
+      "pagerank": 0.079681,
+      "communityId": 2,
+      "tags": [],
+      "summary": "Project overview and entry point for new readers."
+    },
+    {
+      "id": "file:install.mjs",
+      "type": "file",
+      "filePath": "install.mjs",
+      "language": "javascript",
+      "symbolCount": 18,
+      "lineCount": 118,
+      "complexity": "complex",
+      "pagerank": 0.079681,
+      "communityId": 1,
+      "tags": [],
+      "summary": "Application module install defining ok, info, warn.",
+      "primaryOwner": "aniketshaw748-hub"
+    },
+    {
+      "id": "file:install.sh",
+      "type": "file",
+      "filePath": "install.sh",
+      "language": "shell",
+      "symbolCount": 0,
+      "lineCount": 7,
+      "complexity": "simple",
+      "pagerank": 0.079681,
+      "communityId": 4,
+      "tags": [],
+      "summary": "Application module install.",
+      "primaryOwner": "aniketshaw748-hub"
+    },
+    {
+      "id": "file:statusline.mjs",
+      "type": "file",
+      "filePath": "statusline.mjs",
+      "language": "javascript",
+      "symbolCount": 18,
+      "lineCount": 193,
+      "complexity": "complex",
+      "pagerank": 0.079681,
+      "communityId": 0,
+      "tags": [],
+      "summary": "Application module statusline defining esc, dim, fg.",
+      "primaryOwner": "aniketshaw748-hub"
+    },
+    {
+      "id": "file:test.mjs",
+      "type": "file",
+      "filePath": "test.mjs",
+      "language": "javascript",
+      "symbolCount": 4,
+      "lineCount": 51,
+      "complexity": "moderate",
+      "pagerank": 0.079681,
+      "communityId": 3,
+      "tags": [
+        "test"
+      ],
+      "summary": "Tests for test.",
+      "primaryOwner": "aniketshaw748-hub"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:install.mjs",
+      "target": "file:external:node:fs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:install.mjs",
+      "target": "file:external:node:os",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:install.mjs",
+      "target": "file:external:node:path",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:install.mjs",
+      "target": "file:external:node:url",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:statusline.mjs",
+      "target": "file:external:node:fs",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:statusline.mjs",
+      "target": "file:external:node:os",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:statusline.mjs",
+      "target": "file:external:node:path",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:test.mjs",
+      "target": "file:external:node:child_process",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:test.mjs",
+      "target": "file:external:node:path",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:test.mjs",
+      "target": "file:external:node:url",
+      "type": "tested_by",
+      "direction": "forward",
+      "weight": 1.0
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:application",
+      "name": "Application",
+      "description": "",
+      "nodeIds": [
+        "file:README.md",
+        "file:install.mjs",
+        "file:install.sh",
+        "file:statusline.mjs"
+      ],
+      "display_order": 0,
+      "order_basis": "canonical"
+    },
+    {
+      "id": "layer:test",
+      "name": "Test",
+      "description": "",
+      "nodeIds": [
+        "file:test.mjs"
+      ],
+      "display_order": 1,
+      "order_basis": "canonical"
+    }
+  ],
+  "tour": [
+    {
+      "order": 1,
+      "target_path": "README.md",
+      "page_type": "repo_overview",
+      "title": "README.md",
+      "depth": 0,
+      "kind": "overview",
+      "reason": "Start here for the end-to-end picture before diving into the code.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 2,
+      "target_path": "install.mjs",
+      "page_type": "file_page",
+      "title": "install.mjs",
+      "depth": 0,
+      "kind": "code",
+      "reason": "The walk's anchor \u2014 its imports fan out the widest in a repo with no single entry point.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 3,
+      "target_path": "statusline.mjs",
+      "page_type": "file_page",
+      "title": "statusline.mjs",
+      "depth": 1,
+      "kind": "code",
+      "reason": "Off the import paths walked above \u2014 a standalone or supporting file.",
+      "layer_id": "layer:application"
+    },
+    {
+      "order": 4,
+      "target_path": "test.mjs",
+      "page_type": "file_page",
+      "title": "test.mjs",
+      "depth": 2,
+      "kind": "code",
+      "reason": "The test suite \u2014 how the system's behavior is verified.",
+      "layer_id": "layer:test"
+    }
+  ],
+  "modules": [
+    {
+      "id": "module:application",
+      "name": "Application",
+      "path": "",
+      "layerId": "layer:application",
+      "nodeIds": [
+        "file:README.md",
+        "file:install.mjs",
+        "file:install.sh",
+        "file:statusline.mjs"
+      ],
+      "wholeLayer": true,
+      "language": "javascript"
+    }
+  ]
+}
