@@ -6,6 +6,7 @@
     "is_monorepo": false,
     "total_files": 5,
     "entry_points": [],
+    "packages": [],
     "tech_stack": [],
     "entry_candidates": [],
     "graph_mode": "flow"
@@ -20,9 +21,10 @@
       "lineCount": 134,
       "complexity": "moderate",
       "pagerank": 0.079681,
-      "communityId": 2,
+      "communityId": 0,
       "tags": [],
-      "summary": "Project overview and entry point for new readers."
+      "summary": "Project overview and entry point for new readers.",
+      "primaryOwner": "aniketshaw748-hub"
     },
     {
       "id": "file:install.mjs",
@@ -35,8 +37,7 @@
       "pagerank": 0.079681,
       "communityId": 1,
       "tags": [],
-      "summary": "Application module install defining ok, info, warn.",
-      "primaryOwner": "aniketshaw748-hub"
+      "summary": "Application module install defining ok, info, warn."
     },
     {
       "id": "file:install.sh",
@@ -47,10 +48,9 @@
       "lineCount": 7,
       "complexity": "simple",
       "pagerank": 0.079681,
-      "communityId": 4,
+      "communityId": 2,
       "tags": [],
-      "summary": "Application module install.",
-      "primaryOwner": "aniketshaw748-hub"
+      "summary": "Application module install."
     },
     {
       "id": "file:statusline.mjs",
@@ -61,10 +61,9 @@
       "lineCount": 193,
       "complexity": "complex",
       "pagerank": 0.079681,
-      "communityId": 0,
+      "communityId": 3,
       "tags": [],
-      "summary": "Application module statusline defining esc, dim, fg.",
-      "primaryOwner": "aniketshaw748-hub"
+      "summary": "Application module statusline defining esc, dim, fg."
     },
     {
       "id": "file:test.mjs",
@@ -75,12 +74,9 @@
       "lineCount": 51,
       "complexity": "moderate",
       "pagerank": 0.079681,
-      "communityId": 3,
-      "tags": [
-        "test"
-      ],
-      "summary": "Tests for test.",
-      "primaryOwner": "aniketshaw748-hub"
+      "communityId": 4,
+      "tags": [],
+      "summary": "Application module test (4 symbols)."
     }
   ],
   "edges": [
@@ -136,21 +132,21 @@
     {
       "source": "file:test.mjs",
       "target": "file:external:node:child_process",
-      "type": "tested_by",
+      "type": "imports",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:test.mjs",
       "target": "file:external:node:path",
-      "type": "tested_by",
+      "type": "imports",
       "direction": "forward",
       "weight": 1.0
     },
     {
       "source": "file:test.mjs",
       "target": "file:external:node:url",
-      "type": "tested_by",
+      "type": "imports",
       "direction": "forward",
       "weight": 1.0
     }
@@ -164,19 +160,10 @@
         "file:README.md",
         "file:install.mjs",
         "file:install.sh",
-        "file:statusline.mjs"
-      ],
-      "display_order": 0,
-      "order_basis": "canonical"
-    },
-    {
-      "id": "layer:test",
-      "name": "Test",
-      "description": "",
-      "nodeIds": [
+        "file:statusline.mjs",
         "file:test.mjs"
       ],
-      "display_order": 1,
+      "display_order": 0,
       "order_basis": "canonical"
     }
   ],
@@ -216,10 +203,10 @@
       "target_path": "test.mjs",
       "page_type": "file_page",
       "title": "test.mjs",
-      "depth": 2,
+      "depth": 1,
       "kind": "code",
-      "reason": "The test suite \u2014 how the system's behavior is verified.",
-      "layer_id": "layer:test"
+      "reason": "Off the import paths walked above \u2014 a standalone or supporting file.",
+      "layer_id": "layer:application"
     }
   ],
   "modules": [
@@ -232,7 +219,8 @@
         "file:README.md",
         "file:install.mjs",
         "file:install.sh",
-        "file:statusline.mjs"
+        "file:statusline.mjs",
+        "file:test.mjs"
       ],
       "wholeLayer": true,
       "language": "javascript"
